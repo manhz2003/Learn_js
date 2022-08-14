@@ -1,15 +1,19 @@
-// CALL BACK
-// Khái niệm: Gọi hàm trong 1 hàm khác. là một hàm sẽ được thực hiện sau khi một hàm khác 
-// đã thực hiện xong. truyền hàm là tham chiếu vào đối số của 1 hàm
-// ví dụ: 1 hàm cần chạy sau 1 khoảng thời gian để các hàm khác chạy trước thì cho làm đó tạm dừng
-// bằng setTimeout(). Gọi là bất đồng bộ
+// CALLBACK
+// Khái niệm: Là hàm được truyền qua đối số của hàm khác
+// javascript hoạt động theo kiểu đồng bộ và bất đồng bộ
 
-// Ví dụ về js đồng bộ (chạy lần lượt)
+// Ví dụ về js đồng bộ (chạy lần lượt từ trên xuống dưới, từ trái sang phải)
 
-fnDad = () => {
-    console('Đây là hàm cha !')
+myFunction = (param) => {
+    param(`học lập trình`)
 }
 
-fnChild = () => {
-
+myCallback = (value) => {
+    console.log(`value: ${value}`)
 }
+
+// myCallback(`Học lập trình`) , thay vì gọi trực tiếp hàm myCallback thì gọi nó trong hàm khác
+
+// myCallback là hàm làm đối số của hàm myFunction
+// xem lại bài callback trên f8, và xem lại bình luận của bạn tran luan trong hỏi đáp
+myFunction(myCallback)
