@@ -11,8 +11,13 @@ Bước 5: git remote add origin https://github.com/manhz2003/Learn_js.git
 (đường dẫn lấy ở thư mục git tạo trên git trình duyệt, đường dẫn trên chỉ là ví dụ)
 Bước 6: git push -u origin master (push code lên git trình duyệt)
 
-// Lưu ý: mỗi lần add code nên dùng git status để kiểm tra, khi add sử dụng 1 trong các
-// dấu + trên tùy trường hợp
-
 CÁCH LẤY CODE VỀ TRÊN GITHUB VỀ MÁY
+git clone https://github.com/manhz2003/Learn_js.git
+(sử dụng đường dẫn khác tương ứng với project)
+
+// Khi thêm link kết nối với web báo lỗi thì thêm: git remote rm origin
+// Lưu ý: mỗi lần add code nên dùng git status để kiểm tra
+// Ở bước 2 sử dụng các lệnh tương ứng tùy vào trường hợp cụ thể
+// Khi clone code về máy, tạo sẵn vị trí cần lưu, mở terminal lên rồi thêm lệnh như
+// dòng 15 bên trên (sử dụng link tương ứng với project)
 
