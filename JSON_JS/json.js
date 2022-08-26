@@ -4,7 +4,6 @@
 // number, string, object, null, bolearn, array
 
 // biểu diễn json sử dụng dấu ' '
-// Stringify: chuyển từ javascript sang json
 let json = '6' // json dạng number
 let json1 = '"a"' // json dạng chuỗi
 let json2 = '["javascript", "php", "ruby"]' // json dạng array
@@ -12,6 +11,7 @@ let json3 = '{"name":"Manh","age":19,"address":"ha noi"}'
 let json4 = 'true' // json dạng bolearn
 let json5 = 'null' // json dạng null
 
+// parse: từ JSON -> javascript
 console.log(JSON.parse(json))
 console.log(JSON.parse(json1))
 console.log(JSON.parse(json2))
@@ -19,7 +19,7 @@ console.log(JSON.parse(json3))
 console.log(JSON.parse(json4))
 console.log(JSON.parse(json5))
 
-// parse: từ JSON -> javascript
+// Stringify: chuyển từ javascript sang json
 console.log(JSON.stringify(123))
 console.log(JSON.stringify('hello'))
 
