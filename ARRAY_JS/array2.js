@@ -6,8 +6,8 @@
     3. some    (chỉ cần 1 trong những phần tử thỏa mãn điều kiện nào đó thì trả về true)
     4. find    (tìm kiếm 1 phần tử nào đó dựa vào các thành phần có trong mảng)
     5. filter  (giống như find nhưng trả về tất cả phần tử thỏa mãn, find chỉ trả về 1 phần tử)
-    6. map     ()
-    7. reduce  ()
+    6. map     (sử dụng để thay đổi nội dung của element trong array)
+    7. reduce  (dùng để thu về 1 giá trị duy nhất, ví dụ tính tổng số tiền coin...)
     dịch nghĩa 1 số từ:
     each: mỗi; every: mọi; find: tìm thấy; filter: lọc; map:bản đồ; reduce: giảm
 */
@@ -23,11 +23,11 @@ let courses = [{
 }, {
     id: 3,
     name: 'PHP',
-    coin: 0
+    coin: 50
 }, {
     id: 4,
     name: 'PHP',
-    coin: 0
+    coin: 120
 }]
 
 // forEach()
@@ -72,3 +72,36 @@ var course = courses.filter(function(courses) {
     return courses.name === 'PHP'
 })
 console.log(course)
+
+// map()
+// thêm chữ 'khóa học' trước tên khóa học ở key name
+// thêm phần tử coinText: Giá coin
+
+let newCourses = courses.map(function(course) {
+    return {
+        id: course.id,
+        name: `Khóa học: ${course.name}`,
+        coin: course.coin,
+        coinText: `Giá: ${course.coin}`
+    }
+})
+console.log(newCourses)
+
+// reduce ()
+// ví dụ: tính tổng số coin trong các khóa học
+// lưu trữ
+// thực hiện việc lưu trữ 
+
+// tham số accumulator: biến lưu trữ (hàm reduce return cái gì tham số sẽ lưu trữ cái đó)
+// tham số currentValue: là phần tử hiện tại của mảng
+// tham số currentindex: là chỉ mục của các phần tử
+// tham số originArray: giá trị phần tử gốc của mảng
+// để tính tổng số coin ta lấy giá trị lưu trữ + phần tử hiện tại của mảng
+// accumulator + currentValue.coin
+coinHandler = (accumulator, currentValue, currentIndex, originArray) => {
+    return accumulator + currentValue.coin
+}
+
+// tham số 0 là khởi tạo biến lưu trữ giá trị ban đầu = 0, được gán vào accumulator
+let totalCoin = courses.reduce(coinHandler, 0)
+console.log(totalCoin)
