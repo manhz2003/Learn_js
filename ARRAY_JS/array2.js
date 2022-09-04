@@ -84,6 +84,7 @@ let newCourses = courses.map(function(course) {
         coin: course.coin,
         coinText: `Giá: ${course.coin}`
     }
+
 })
 console.log(newCourses)
 
