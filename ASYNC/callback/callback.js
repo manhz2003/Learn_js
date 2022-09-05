@@ -21,19 +21,34 @@ myFunction(myCallback)
 // hiểu hơn về callback bằng cách hiểu hoạt động bên trong của phương thức:
 // map, forrEach, find, filter, some, every, reduce
 
-Array.prototype.map2 = function(callBack) {
-    let output = [],
-        arrayLength = this.length
-    for (i = 0; i < arrayLength; i++) {
-        let result = callBack(this[i], i)
-        output.push(result)
+// Empty element of array (phần tử trống rỗng của mảng, bổ sung kiến thức về array)
 
+
+// định nghĩa cho mảng có độ dài là 10
+// chỉ có 3 phần tử trong mảng là giá trị thật, 7 phần tử còn lại là giá trị rỗng
+// trong trường hợp này khi lặp qua mảng vòng lặp for thông thường sẽ lặp 10 lần
+let names = ['manh', 'dung', 'nam']
+names.length = 10
+
+// sử dụng for in để chỉ lặp qua các phần tử có thật trong mảng
+for (test in names) {
+    console.log(test)
+}
+
+// tạo ra method map2() hoạt động tương tự map()
+Array.prototype.map2 = function(callback) {
+    let output = [],
+        arrayLangth = this.length
+    for (i = 0; i < arrayLangth; i++) {
+        let result = callback(this[i], i)
+        output.push(result)
     }
+    return output
 }
 
 let courses = ['javascript', 'php', 'ruby']
 
-let htmls = courses.map2(function(course) {
+let htmls = courses.map2(function(course, index) {
     return `<h2>${course}</h2>`
 })
 
