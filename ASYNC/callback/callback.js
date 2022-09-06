@@ -16,14 +16,7 @@ myCallback = (value) => {
 // Khi gọi myCallback làm đối số của myFunction thì tham số param trong myFunction chính là hàm Mycallback
 myFunction(myCallback)
 
-
-// CALLBACK PHẦN 2
-// hiểu hơn về callback bằng cách hiểu hoạt động bên trong của phương thức:
-// map, forrEach, find, filter, some, every, reduce
-
 // Empty element of array (phần tử trống rỗng của mảng, bổ sung kiến thức về array)
-
-
 // định nghĩa cho mảng có độ dài là 10
 // chỉ có 3 phần tử trong mảng là giá trị thật, 7 phần tử còn lại là giá trị rỗng
 // trong trường hợp này khi lặp qua mảng vòng lặp for thông thường sẽ lặp 10 lần
@@ -35,7 +28,12 @@ for (test in names) {
     console.log(test)
 }
 
+// CALLBACK PHẦN 2
+// hiểu hơn về callback bằng cách hiểu hoạt động bên trong của phương thức:
+// map, forEach, find, filter, some, every, reduce
 // tạo ra method map2() hoạt động tương tự map()
+
+// map2()
 Array.prototype.map2 = function(callback) {
     let output = [],
         arrayLangth = this.length
@@ -53,3 +51,15 @@ let htmls = courses.map2(function(course, index) {
 })
 
 console.log(htmls.join(''))
+
+// forEach2()
+Array.prototype.forEach2 = function(callback) {
+    for (let index in this) {
+        console.log('index: ', index)
+    }
+}
+
+
+courses.forEach2(function(course, index, array) {
+
+})
