@@ -4,11 +4,11 @@
 
 // Ví dụ về js đồng bộ (chạy lần lượt từ trên xuống dưới, từ trái sang phải)
 
-myFunction = (param) => { // tham số param là myCallback vì myCallback được gọi trong myFunction
+function myFunction(param) { // tham số param là myCallback vì myCallback được gọi trong myFunction
     param(`học lập trình`)
 }
 
-myCallback = (value) => {
+function myCallback(value) {
     console.log(`value: ${value}`)
 }
 
@@ -55,11 +55,15 @@ console.log(htmls.join(''))
 // forEach2()
 Array.prototype.forEach2 = function(callback) {
     for (let index in this) {
-        console.log('index: ', index)
+        if (this.hasOwnProperty(index)) {
+            callback(this[index], index, this)
+        }
     }
 }
 
+console.log(courses)
+courses.push('node js', 'java')
 
 courses.forEach2(function(course, index, array) {
-
+    console.log(course, index, array)
 })
