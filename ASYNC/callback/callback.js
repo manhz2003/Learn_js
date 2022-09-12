@@ -1,8 +1,5 @@
 // CALLBACK
-// Khái niệm: Là hàm được truyền qua đối số khi gọi 1 hàm khác
-// javascript hoạt động theo kiểu đồng bộ và bất đồng bộ
-
-// Ví dụ về js đồng bộ (chạy lần lượt từ trên xuống dưới, từ trái sang phải)
+// Khái niệm: callback Là hàm được truyền qua đối số khi gọi 1 hàm khác
 
 function myFunction(param) { // tham số param là myCallback vì myCallback được gọi trong myFunction
     param(`học lập trình`)

@@ -36,3 +36,22 @@ function myFunction(a) {
 }
 
 myFunction(18) // 18 là giá trị đối số a
+
+// hàm sử dụng return
+// có 2 tác dụng chính
+// 1. biến hàm thành 1 giá trị, có thể dùng hàm để tính toán, hoặc làm các công việc khác.
+// 2. hàm return tại đâu sẽ dừng lại tại đó, cho dù đằng sau có thực hiện công việc gì
+function sum(x, y) {
+    return x + y // hàm dừng lại tại đây
+    x - y // không được thực hiện vì bên trên đã return
+}
+
+console.log(sum(2, 3)); // vì sử dụng return hàm đã trở thành 1 giá trị nên phải console.log
+// nó ra
+
+// hàm sum được return nên trở thành 1 giá trị, dùng sum để tính toán tiếp trong hàm khác
+function sum2(z) {
+    return sum(2, 3) + z
+}
+
+console.log(sum2(10));
