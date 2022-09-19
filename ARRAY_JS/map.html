@@ -9,12 +9,12 @@
 <body>
     <h1>Phương thức map () trong array</h1>
    <script>
-    // Array map()
-    // tác dụng: [x, z, u] -> [y, v, b]
-    // lặp qua tất cả giá trị trong mảng và chuyển đổi giá trị của mảng sang mảng mới
+    // map
+    // Định nghĩa: lặp qua all phần tử và trả về mảng có giá trị mới
     // trả về mảng mới bằng số lượng phần tử ở mảng cũ nhưng thay đổi về giá trị
+    // ví dụ: a[2, 4, 6, 8] -> map(a/2) -> b[1, 2, 3, 4]
 
-    // ví dụ
+    // ví dụ 1
     let number = [1, 2, 3, 4]
     let newNumber = number.map(function(x){
         return x*x // thực hiện phép bình phương giá trị x
