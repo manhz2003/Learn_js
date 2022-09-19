@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>reduce</title>
 </head>
 <body>
-    
+    <h1>Phương thức reduce trong array</h1>
+    <!-- ảnh sơ đồ minh họa cách hoạt động của reduce -->
+    <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/305487838_522120633247810_4379077715985340352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=tcYMR8q--UUAX9WDC0e&tn=8k7Q9vDVRUNAavPM&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8is_1YBtUoGFWw6vcXjsLsE2j4Vb5TqqJmgfgvToNITg&oe=632D1C72" alt="">
+    <script>
+        // reduce
+        // Định nghĩa: lặp qua all phần tử và trả về mảng có giá trị mới
+        // reduce nhận 2 tham số đầu vào: kết quả của 2 phần tử đầu tiên trong mảng kết hợp với phần tử thứ 3
+        // trả về kết quả mới tạm gọi là x, x kết hợp với phần tử thứ 4 trả về kết quả tiếp theo gọi là y.
+        // y kết hợp với phần tử thứ 5 trả về kết quả mới tạm gọi là z. z kết hợp với phần tử thứ 4 ... tiếp
+        // tục giảm dần cho tới phần tử cuối cùng trong mảng.
+
+        // ví dụ 
+        let number = [10, 2, 8, 4, 1]
+        let newNumber = number.reduce(function(a, b){
+            return a + b // thực hiện phép tính tổng (a và b có thể kết hợp theo phép tính khác)
+        })
+        console.log(newNumber); // 10 + 2 = 12; 12 + 8 = 20; 20 + 4 = 24; 24 + 1 = 25 => kết quả = 25
+    </script>
 </body>
 </html>
