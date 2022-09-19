@@ -30,8 +30,8 @@ console.log(querySelectorAll[2]) // lấy ra phần tử thứ 3 trong danh sác
 let headingElement = document.querySelector('h2') // gọi đến element h2
 
 headingElement.className = 'classHeading' // thêm 1 class cho thẻ h2
-headingElement.id = 'idHeading' // thêm 1 thuộc tính id cho thẻ h2
-headingElement.setAttribute('data-1', 'du lieu') // cách khác để thêm attribute
+headingElement.id = 'idHeading' // thêm 1 attribute id cho thẻ h2
+headingElement.setAttribute('data-1', 'du lieu') // cách thêm attribute khác
 headingElement.setAttribute('title', 'test-title') // thêm 1 tiêu đề
 console.log(headingElement.getAttribute('title')) // lấy ra thuộc tính title, 
 console.log(headingElement.getAttribute('data-1')) // lấy ra thuộc tính data-1

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method map</title>
+</head>
+<body>
+    <h1>Phương thức map () trong array</h1>
+   <script>
+    // Array map()
+    // tác dụng: [x, z, u] -> [y, v, b]
+    // lặp qua tất cả giá trị trong mảng và chuyển đổi giá trị của mảng sang mảng mới
+    // trả về mảng mới bằng số lượng phần tử ở mảng cũ nhưng thay đổi về giá trị
+
+    // ví dụ
+    let number = [1, 2, 3, 4]
+    let newNumber = number.map(function(x){
+        return x*x // thực hiện phép bình phương giá trị x
+    })
+
+    console.log(newNumber);
+    // kết quả mảng mới [1, 4, 9, 16]
+
+    // ví dụ 2, tính diện tích
+    let dietTich = [
+        {width: 10, height: 5},
+        {width: 18, height: 2},
+        {width: 11, height: 8},
+        {width: 2, height: 4},
+    ]
+
+    let ketQua = dietTich.map(function(dt){
+        return dt.width * dt.height
+    })
+    console.log(ketQua);
+
+   </script> 
+</body>
+</html>
