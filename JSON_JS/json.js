@@ -7,7 +7,7 @@
 let json = '6' // json dạng number
 let json1 = '"a"' // json dạng chuỗi
 let json2 = '["javascript", "php", "ruby"]' // json dạng array
-let json3 = '{"name":"Manh","age":19,"address":"ha noi"}'
+let json3 = '{"name":"Manh","age":19,"address":"ha noi"}' // json dạng object
 let json4 = 'true' // json dạng bolearn
 let json5 = 'null' // json dạng null
 
